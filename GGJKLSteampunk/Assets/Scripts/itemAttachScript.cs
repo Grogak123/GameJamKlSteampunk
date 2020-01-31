@@ -15,8 +15,9 @@ public class itemAttachScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        invScript.itemCollected(itemName);
-        Destroy(gameObject);
-
+        if (invScript.itemCollected(itemName))
+        {
+            Destroy(gameObject);
+        }
     }
 }
