@@ -1,6 +1,10 @@
 Base path: C:/Program Files/Unity/Hub/Editor/2018.4.16f1/Editor/Data
 Cmd: initializeCompiler
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+Cmd: initializeCompiler
+>>>>>>> Stashed changes
 =======
 Cmd: initializeCompiler
 >>>>>>> Stashed changes

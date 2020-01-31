@@ -75,7 +75,11 @@ MonoBehaviour:
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 31
+=======
+  controlID: 53
+>>>>>>> Stashed changes
 =======
   controlID: 53
 >>>>>>> Stashed changes
@@ -126,8 +130,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     width: 1536
     height: 781
+=======
+    width: 1920
+    height: 997
+>>>>>>> Stashed changes
 =======
     width: 1920
     height: 997
@@ -202,7 +211,11 @@ MonoBehaviour:
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 62
+=======
+  controlID: 84
+>>>>>>> Stashed changes
 =======
   controlID: 84
 >>>>>>> Stashed changes
@@ -231,7 +244,11 @@ MonoBehaviour:
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 63
+=======
+  controlID: 85
+>>>>>>> Stashed changes
 =======
   controlID: 85
 >>>>>>> Stashed changes
@@ -253,8 +270,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     width: 783
     height: 377
+=======
+    width: 979
+    height: 488
+>>>>>>> Stashed changes
 =======
     width: 979
     height: 488
@@ -406,9 +428,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       m_SelectedIDs: e4280000
       m_LastClickedID: 0
       m_ExpandedIDs: d2fbffff
+=======
+      m_SelectedIDs: 242a0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8afbffff
+>>>>>>> Stashed changes
 =======
       m_SelectedIDs: 242a0000
       m_LastClickedID: 0
@@ -651,7 +679,11 @@ MonoBehaviour:
   - Assets/Scenes
   m_LastFoldersGridSize: 16
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LastProjectPath: C:\Users\chris\Documents\GameJamKlSteampunk\GGJKLSteampunk
+=======
+  m_LastProjectPath: D:\Dokumente\GameJamKlSteampunk\GGJKLSteampunk
+>>>>>>> Stashed changes
 =======
   m_LastProjectPath: D:\Dokumente\GameJamKlSteampunk\GGJKLSteampunk
 >>>>>>> Stashed changes
@@ -660,9 +692,15 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_SelectedIDs: f8270000
     m_LastClickedID: 10232
     m_ExpandedIDs: 000000007026000000ca9a3b
+=======
+    m_SelectedIDs: 38290000
+    m_LastClickedID: 10552
+    m_ExpandedIDs: 00000000b027000000ca9a3b
+>>>>>>> Stashed changes
 =======
     m_SelectedIDs: 38290000
     m_LastClickedID: 10552
@@ -696,7 +734,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_ExpandedIDs: 0000000070260000
+=======
+    m_ExpandedIDs: 00000000b0270000
+>>>>>>> Stashed changes
 =======
     m_ExpandedIDs: 00000000b0270000
 >>>>>>> Stashed changes
