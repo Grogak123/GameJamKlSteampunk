@@ -7,6 +7,8 @@ namespace gamejam
     public class MainCharacterMovement : MonoBehaviour
     {
 
+        private Animator thisAnimator;
+
         Rigidbody2D body;
 
         float horizontal;
@@ -17,6 +19,7 @@ namespace gamejam
 
         void Start()
         {
+            thisAnimator = GetComponent<Animator>();
             body = GetComponent<Rigidbody2D>();
         }
 
@@ -25,6 +28,11 @@ namespace gamejam
             // Gives a value between -1 and 1
             horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
             vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+
+
+            thisAnimator.SetFloat("Horizontal", horizontal);
+            thisAnimator.SetFloat("Vertical", vertical);
+            
         }
 
         void FixedUpdate()
