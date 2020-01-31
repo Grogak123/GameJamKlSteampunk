@@ -129,10 +129,109 @@ public class inventarScript : MonoBehaviour
                 break;
 
             default:
-                Debug.Log("Falscher Wert bei itemCollected im inventarScript übergeben: " + name);
+                Debug.Log("Falscher Wert bei itemDestroyed im inventarScript übergeben: " + name);
                 break;
         }
 
     }
+
+    public void itemSteal()
+    {
+        float random = Random.Range(0.0f, 1.0f);
+        bool stolen = false;
+        if(random <= 0.3f)
+        {
+
+            if(clockwork>0 && pump>0)
+            {
+                int random2 = Random.Range(0, 2);
+                if (random2 == 0)
+                {
+                    clockwork--;
+                    stolen = true;
+                }
+                else
+                {
+                    pump--;
+                    stolen = true;
+                }
+            }
+            else if (clockwork > 0)
+            {
+                clockwork--;
+                stolen = true;
+            }
+            else if (pump>0)
+            {
+                pump--;
+                stolen = true;
+            }
+
+
+        }
+        if (!stolen)
+        {
+            int max = scrap + feather + screw + gear;
+            if (max > 0)
+            {
+
+                int random2 = Random.Range(2, 5);
+                int i = 0;
+                if (max > random2)
+                {
+                    while (i < random2)
+                    {
+                        int random3 = Random.Range(0, 4);
+                        switch (random3)
+                        {
+                            case 0:
+                                if (scrap > 0)
+                                {
+                                    scrap--;
+                                    i++;
+                                }
+                                break;
+                            case 1:
+                                if (feather > 0)
+                                {
+                                    feather--;
+                                    i++;
+                                }
+                                break;
+                            case 2:
+                                if (screw > 0)
+                                {
+                                    screw--;
+                                    i++;
+                                }
+                                break;
+                            case 3:
+                                if (gear > 0)
+                                {
+                                    gear--;
+                                    i++;
+                                }
+                                break;
+                            default:
+                                Debug.Log("Impossible error in itemSteal in inventarScript");
+                                i++;
+                                break;
+                        }
+                    }
+                }
+                else
+                {
+                    scrap = 0;
+                    feather = 0;
+                    screw = 0;
+                    gear = 0;
+                }
+
+            }
+
+        }
+    }
+
+
 
 }
