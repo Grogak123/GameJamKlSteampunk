@@ -6,9 +6,13 @@ public class inventarScript : MonoBehaviour
     private int scrap, feather, screw, gear, pump, clockwork, nucReactor, invUsed;
 
 
+    /*
+     * Anzahl der jeweiligen Items um das nächsthöhere zu craften
+     */
     public int ScrapScrewFactor = 4;
     public int FeatherGearFactor = 4;
     public int pumpClockFactor = 4;
+
     public int maxInvSize = 20;
 
 
@@ -24,14 +28,14 @@ public class inventarScript : MonoBehaviour
         invUsed = 0;
     }
 
-    void Update()
-    {
-        
-    }
-
+    /*
+     * Hebt ein Item auf solange genug Platz ist. Gibt folgendes aus:
+     *      - True: Wenn genug Platz im Inventar war und aufgehoben wurde
+     *      - False: Wenn nicht genug Platz im Inventar war und  nicht aufgehoben wurde
+     */
     public bool itemCollected (string name)
     {
-        calcInvCapacity();
+        calcInvUsed();
         if(invUsed < maxInvSize)
         {
             switch (name)
@@ -61,11 +65,17 @@ public class inventarScript : MonoBehaviour
 
     }
 
-    private void calcInvCapacity()
+    /*
+     * Hilfsmethode um den belegten Inventarplatz zu berechnen
+     */
+    private void calcInvUsed()
     {
         invUsed = scrap + feather + screw + gear + pump + clockwork + nucReactor;
     }
 
+    /*
+     * Geht durch das Inventar durch und upgraded alle möglichen Items
+     */
     public void itemUpgrade()
     {
         
@@ -94,6 +104,9 @@ public class inventarScript : MonoBehaviour
         }
     }
 
+    /*
+     * Zerstört 1 Item abhängig davon welcher Name übergeben wurde
+     */
     public void itemDestroy(string name)
     {
 
@@ -135,6 +148,15 @@ public class inventarScript : MonoBehaviour
 
     }
 
+
+    /*
+     * Stielt zufällig entweder:
+     *      - mit 30% Warscheinlichkeit 1 Tier2 Material (sofern verfügbar)
+     *      - mit 70% Warscheinlichkeit 2-4 Tier1 Materialien
+     * Stielt niemals mehr Materialien als im Inventar sind. 
+     * Bei leerem Inventar passiert nichts
+     * Werden z.B. versucht 4 Tier1 Materialien gestohlen aber nur 2 sind verfügbar, so werden diese beiden gestohlen
+     */
     public void itemSteal()
     {
         float random = Random.Range(0.0f, 1.0f);
