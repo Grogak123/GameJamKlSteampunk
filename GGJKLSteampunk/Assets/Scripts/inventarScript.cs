@@ -211,6 +211,38 @@ public class inventarScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Feather"))
+        {
+            itemCollected("Feather");
+            Debug.Log("Feather: " + FEATHER);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Gear"))
+        {
+            itemCollected("Gear");
+            Debug.Log("Gear: " + GEAR);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Screw"))
+        {
+            itemCollected("Screw");
+            Debug.Log("Screw: " + SCREW);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Scrap"))
+        {
+            itemCollected("Scrap");
+            Debug.Log("Srap: " + SCRAP);
+            Destroy(collision.gameObject);
+        }
+
+    }
+
     /*
      * Zerstört 1 Item abhängig davon welcher Name übergeben wurde
      */

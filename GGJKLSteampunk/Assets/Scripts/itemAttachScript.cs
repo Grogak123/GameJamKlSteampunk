@@ -11,6 +11,9 @@ public class itemAttachScript : MonoBehaviour
         mainChar = GameObject.Find("MainCharacter");
         itemName = gameObject.tag;
         invScript = (inventarScript)mainChar.GetComponent(typeof(inventarScript));
+        Debug.Log(mainChar);
+        Debug.Log(itemName);
+        Debug.Log(invScript);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
