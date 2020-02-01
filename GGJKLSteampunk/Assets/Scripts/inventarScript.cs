@@ -264,6 +264,7 @@ public class inventarScript : MonoBehaviour
 
     /*
      * Zerstört 1 Item abhängig davon welcher Name übergeben wurde
+     * Wird für die UI benutzt, bitte nimmer ändern :)
      */
     public void itemDestroy(string name)
     {
@@ -300,7 +301,7 @@ public class inventarScript : MonoBehaviour
                     clockwork--;
                     clockworkText.text = clockwork.ToString();
                 break;
-            case "nucReactor":
+            case "NucReactor":
                 if(nucReactor > 0)
                     nucReactor--;
                     nucReactorText.text = nucReactor.ToString();
