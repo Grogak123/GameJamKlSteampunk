@@ -425,7 +425,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 274205736}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: itemDestroy
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: NucReactor
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &274205738
 Animator:
   serializedVersion: 3
@@ -559,7 +570,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 373905632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: itemDestroy
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Gear
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &676453755
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +696,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 676453758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: itemDestroy
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Screw
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &692878083
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +822,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 692878086}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: itemDestroy
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Scrap
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1033523579
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +846,7 @@ GameObject:
   - component: {fileID: 1033523582}
   - component: {fileID: 1033523581}
   m_Layer: 5
-  m_Name: ClockwerkText
+  m_Name: NucReactorText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1214,7 +1258,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1260152815}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: itemDestroy
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Clockwork
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1282651214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,7 +1384,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1282651217}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: itemDestroy
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Feather
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1564041621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,7 +1665,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1666933862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: itemDestroy
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Pump
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1764287106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,7 +1689,7 @@ GameObject:
   - component: {fileID: 1764287109}
   - component: {fileID: 1764287108}
   m_Layer: 5
-  m_Name: ClockwerkText
+  m_Name: ClockworkText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2180,7 +2257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6723727309251872654
 RectTransform:
   m_ObjectHideFlags: 0

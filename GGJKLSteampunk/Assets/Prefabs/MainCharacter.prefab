@@ -96,6 +96,13 @@ MonoBehaviour:
   FeatherGearFactor: 4
   pumpClockFactor: 4
   maxInvSize: 20
+  gearText: {fileID: 0}
+  featherText: {fileID: 0}
+  screwText: {fileID: 0}
+  scrapText: {fileID: 0}
+  clockworkText: {fileID: 0}
+  pumpText: {fileID: 0}
+  nucReactorText: {fileID: 0}
 --- !u!1 &2965168902203530886
 GameObject:
   m_ObjectHideFlags: 0
