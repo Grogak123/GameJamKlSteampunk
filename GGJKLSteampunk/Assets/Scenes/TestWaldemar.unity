@@ -859,7 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointer: {fileID: 2001228515}
-  seconds: 10
+  seconds: 60
 --- !u!114 &1549511645 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
