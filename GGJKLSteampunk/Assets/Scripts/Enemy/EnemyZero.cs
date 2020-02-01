@@ -7,22 +7,47 @@ public class EnemyZero : MonoBehaviour
 {
 
     Vector3 position;
+    Quaternion rotation;
     Boolean isAttacking = false;
     Animator animator;
     public float timeUntilArrived = 0.7f;
+    public int direction = 0;
+
+    public GameObject mainCharacter;
     // Start is called before the first frame update
     void Start()
     {
         position = gameObject.transform.position;
         animator = GetComponent<Animator>();
+        rotation = gameObject.transform.rotation;
 
+        /*
+         * 0 = Right
+         * 1 = Top
+         * 2 = Left
+         * 3 = Bottom
+         */
+        switch (direction)
+        {
+            case 0:
+                animator.SetFloat("horrizontal", 1);
+                break;
+            case 1:
+                animator.SetFloat("vertical", 1);
+                break;
+            case 2:
+                animator.SetFloat("horrizontal", -1);
+                break;
+            case 3:
+                animator.SetFloat("vertical", -1);
+                break;
+            default:
+                Debug.Log("NUR WERTE ZWISCHEN 0 und 3!! Lies die Kommentare im Script Noob!");
+                break;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
@@ -33,7 +58,10 @@ public class EnemyZero : MonoBehaviour
         }
 
     }
-
+    private void OnTriggerEnter2D(BoxCollider2D collider)
+    {
+        mainCharacter.GetComponent<inventarScript>().itemSteal();
+    }
 
     IEnumerator attack()
     {
