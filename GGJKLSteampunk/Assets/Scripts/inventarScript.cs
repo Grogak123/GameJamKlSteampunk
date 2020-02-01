@@ -325,6 +325,7 @@ public class inventarScript : MonoBehaviour
      */
     public void itemSteal()
     {
+
         float random = Random.Range(0.0f, 1.0f);
         bool stolen = false;
         if(random <= 0.3f)

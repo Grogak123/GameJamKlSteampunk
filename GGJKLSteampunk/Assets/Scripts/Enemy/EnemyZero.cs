@@ -57,11 +57,14 @@ public class EnemyZero : MonoBehaviour
             StartCoroutine(attack());
         }
 
+        if (collider2D.gameObject.CompareTag("Player")) 
+        {
+
+            mainCharacter.GetComponent<inventarScript>().itemSteal();
+        }
+
     }
-    private void OnTriggerEnter2D(BoxCollider2D collider)
-    {
-        mainCharacter.GetComponent<inventarScript>().itemSteal();
-    }
+
 
     IEnumerator attack()
     {

@@ -30,9 +30,8 @@ public class Clock : MonoBehaviour
 
         referenceTime += Time.deltaTime;
         
-        Debug.Log("refTime: " + Mathf.Round(referenceTime));
         pointer.rotation = Quaternion.Euler(0, 0, -test);
-        Debug.Log(pointer.rotation);
+
 
         if(referenceTime > seconds)
         {
