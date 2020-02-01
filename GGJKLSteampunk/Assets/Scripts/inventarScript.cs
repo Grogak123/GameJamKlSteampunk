@@ -78,7 +78,7 @@ public class inventarScript : MonoBehaviour
      */
     public void itemUpgrade()
     {
-        
+
         if (scrap>=ScrapScrewFactor && screw>=ScrapScrewFactor)
         {
             int scrapScrewMin = Mathf.Min(scrap, screw) / ScrapScrewFactor;
@@ -101,6 +101,16 @@ public class inventarScript : MonoBehaviour
             nucReactor += pumpClockMin;
             pump -= (pumpClockMin * pumpClockFactor);
             clockwork -= (pumpClockMin * pumpClockFactor);
+        }
+    }
+
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "CraftTable" && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Collision");
+            //itemUpgrade();
         }
     }
 
