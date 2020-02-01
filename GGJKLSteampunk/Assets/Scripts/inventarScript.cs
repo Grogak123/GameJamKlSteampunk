@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 public class inventarScript : MonoBehaviour
 {
@@ -16,6 +17,15 @@ public class inventarScript : MonoBehaviour
     public int maxInvSize = 20;
 
 
+    public TextMeshProUGUI gearText;
+    public TextMeshProUGUI featherText;
+    public TextMeshProUGUI screwText;
+    public TextMeshProUGUI scrapText;
+    public TextMeshProUGUI clockworkText;
+    public TextMeshProUGUI pumpText;
+    public TextMeshProUGUI nucReactorText;
+
+
     void Start()
     {
         scrap = 0;
@@ -26,6 +36,8 @@ public class inventarScript : MonoBehaviour
         clockwork = 0;
         nucReactor = 0;
         invUsed = 0;
+
+        
     }
 
     /*
@@ -42,15 +54,19 @@ public class inventarScript : MonoBehaviour
             {
                 case "Scrap":
                     scrap++;
+                    scrapText.text = scrap.ToString();
                     break;
                 case "Feather":
                     feather++;
+                    featherText.text = feather.ToString();
                     break;
                 case "Screw":
                     screw++;
+                    screwText.text = screw.ToString();
                     break;
                 case "Gear":
                     gear++;
+                    gearText.text = gear.ToString();
                     break;
                 default:
                     Debug.Log("Falscher Wert bei itemCollected im inventarScript übergeben: " + name);
@@ -85,24 +101,27 @@ public class inventarScript : MonoBehaviour
             pump += scrapScrewMin;
             scrap -= (scrapScrewMin * ScrapScrewFactor);
             screw -= (scrapScrewMin * ScrapScrewFactor);
+            pumpText.text = pump.ToString();
             Debug.Log("Pumpen: " +pump);
 
         }
-        if(feather>=FeatherGearFactor && gear >= FeatherGearFactor)
+        if(FEATHER>=FeatherGearFactor && GEAR >= FeatherGearFactor)
         {
             int featherGearMin = Mathf.Min(feather, gear) / FeatherGearFactor;
             clockwork += featherGearMin;
             feather -= (featherGearMin * FeatherGearFactor);
             gear -= (featherGearMin * FeatherGearFactor);
+            clockworkText.text = clockwork.ToString();
             Debug.Log("Gears: " + gear);
         }
 
-        if(pump>=pumpClockFactor && clockwork >= pumpClockFactor)
+        if(PUMP>=pumpClockFactor && CLOCKWORK >= pumpClockFactor)
         {
             int pumpClockMin = Mathf.Min(pump, clockwork) / pumpClockFactor;
             nucReactor += pumpClockMin;
             pump -= (pumpClockMin * pumpClockFactor);
             clockwork -= (pumpClockMin * pumpClockFactor);
+            nucReactorText.text = nucReactor.ToString();
             Debug.Log("Reaktor " + nucReactor);
         }
     }
@@ -201,7 +220,7 @@ public class inventarScript : MonoBehaviour
      *
      */
 
-
+    // Control Craftintable
     void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "CraftTable" && Input.GetKeyDown(KeyCode.E))
@@ -254,30 +273,37 @@ public class inventarScript : MonoBehaviour
             case "Scrap":
                 if(scrap>0)
                     scrap--;
+                    scrapText.text = scrap.ToString();
                 break;
             case "Feather":
                 if(feather>0)
                     feather--;
+                    featherText.text = feather.ToString();
                 break;
             case "Screw":
                 if(screw>0)
                     screw--;
+                    screwText.text = screw.ToString();
                 break;
             case "Gear":
                 if(gear>0)
                     gear--;
+                    gearText.text = gear.ToString();
                 break;
             case "Pump":
                 if(pump > 0)
                     pump--;
+                    pumpText.text = pump.ToString();
                 break;
             case "Clockwork":
                 if(clockwork > 0)
                     clockwork--;
+                    clockworkText.text = clockwork.ToString();
                 break;
             case "nucReactor":
                 if(nucReactor > 0)
                     nucReactor--;
+                    nucReactorText.text = nucReactor.ToString();
                 break;
 
             default:
