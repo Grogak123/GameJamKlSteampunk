@@ -79,12 +79,13 @@ public class inventarScript : MonoBehaviour
     public void itemUpgrade()
     {
 
-        if (scrap>=ScrapScrewFactor && screw>=ScrapScrewFactor)
+        if (SCRAP>=ScrapScrewFactor && SCREW>=ScrapScrewFactor)
         {
             int scrapScrewMin = Mathf.Min(scrap, screw) / ScrapScrewFactor;
             pump += scrapScrewMin;
             scrap -= (scrapScrewMin * ScrapScrewFactor);
             screw -= (scrapScrewMin * ScrapScrewFactor);
+            Debug.Log("Pumpen: " +pump);
 
         }
         if(feather>=FeatherGearFactor && gear >= FeatherGearFactor)
@@ -93,6 +94,7 @@ public class inventarScript : MonoBehaviour
             clockwork += featherGearMin;
             feather -= (featherGearMin * FeatherGearFactor);
             gear -= (featherGearMin * FeatherGearFactor);
+            Debug.Log("Gears: " + gear);
         }
 
         if(pump>=pumpClockFactor && clockwork >= pumpClockFactor)
@@ -101,8 +103,103 @@ public class inventarScript : MonoBehaviour
             nucReactor += pumpClockMin;
             pump -= (pumpClockMin * pumpClockFactor);
             clockwork -= (pumpClockMin * pumpClockFactor);
+            Debug.Log("Reaktor " + nucReactor);
         }
     }
+    /*
+     * Get/SetMethoden in C#
+     *   
+     */
+    public int SCRAP
+    {
+        get { return scrap; }
+        set
+        {
+            if (value < 0)
+                scrap = 0;
+            else
+                scrap = value;
+        }
+    }
+
+
+    public int FEATHER
+    {
+        get { return feather; }
+        set
+        {
+            if (value < 0)
+                feather = 0;
+            else
+                feather = value;
+        }
+    }
+
+    public int SCREW
+    {
+        get { return screw; }
+        set
+        {
+            if (value < 0)
+                screw = 0;
+            else
+                screw = value;
+        }
+    }
+
+
+    public int GEAR
+    {
+        get { return gear; }
+        set
+        {
+            if (value < 0)
+                gear = 0;
+            else
+                gear = value;
+        }
+    }
+
+    public int PUMP
+    {
+        get { return pump; }
+        set
+        {
+            if (value < 0)
+                pump = 0;
+            else
+                pump = value;
+        }
+    }
+
+    public int CLOCKWORK
+    {
+        get { return clockwork; }
+        set
+        {
+            if (value < 0)
+                clockwork = 0;
+            else
+                clockwork = value;
+        }
+    }
+
+    public int NUCREACTOR
+    {
+        get { return nucReactor; }
+        set
+        {
+            if (value < 0)
+                nucReactor = 0;
+            else
+                nucReactor = value;
+        }
+    }
+
+    /*
+     * Trigger für Knopfdruck erkenne und Items upgraden
+     *
+     */
 
 
     void OnTriggerStay2D(Collider2D collision)
@@ -110,7 +207,7 @@ public class inventarScript : MonoBehaviour
         if (collision.gameObject.tag == "CraftTable" && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Collision");
-            //itemUpgrade();
+            itemUpgrade();
         }
     }
 
