@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1054,10 +1054,15 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 663537258231539218, guid: a1950eca73d73374c9333c2c3311c8e7,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1892921040656734765, guid: a1950eca73d73374c9333c2c3311c8e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.19
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1892921040656734765, guid: a1950eca73d73374c9333c2c3311c8e7,
         type: 3}
@@ -1124,8 +1129,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6798942847046139883, guid: a1950eca73d73374c9333c2c3311c8e7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114130886247232180, guid: a1950eca73d73374c9333c2c3311c8e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a1950eca73d73374c9333c2c3311c8e7, type: 3}
+--- !u!1 &2010201293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2741823268101373094, guid: a1950eca73d73374c9333c2c3311c8e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1942331790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2010201294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010201293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d0724b2ec358e4babf6688f2c05688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeUntilArrived: 5
 --- !u!1001 &640133838084692441
 PrefabInstance:
   m_ObjectHideFlags: 0
