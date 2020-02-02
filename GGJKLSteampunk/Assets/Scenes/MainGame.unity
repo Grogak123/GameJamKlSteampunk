@@ -118,6 +118,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1631704289}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &94603068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 721647304555169344, guid: dbaba5858b672a248a977ba5b5722cce,
+    type: 3}
+  m_PrefabInstance: {fileID: 6024648692289283164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &94603069
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94603068}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -13}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40, y: 40}
+    newSize: {x: 20, y: 20}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12, y: 15}
+  m_EdgeRadius: 0
 --- !u!114 &112525520 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 112525520, guid: bb7acaea41463594c82f81ef6a60d82f,
@@ -166,6 +198,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1525579510}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &260926869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7209168988958469228, guid: dbaba5858b672a248a977ba5b5722cce,
+    type: 3}
+  m_PrefabInstance: {fileID: 6024648692289283164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &260926870
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260926869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -13}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40, y: 40}
+    newSize: {x: 40, y: 40}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12, y: 15}
+  m_EdgeRadius: 0
 --- !u!4 &339299804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5202006109129432831, guid: 93c8d50219ef8c147a0e82f5a68f7223,
@@ -2327,6 +2391,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1559437496}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1794648850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5077790367896261803, guid: dbaba5858b672a248a977ba5b5722cce,
+    type: 3}
+  m_PrefabInstance: {fileID: 6024648692289283164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1794648851
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794648850}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -13}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40, y: 40}
+    newSize: {x: 40, y: 40}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12, y: 15}
+  m_EdgeRadius: 0
 --- !u!4 &1795346439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7259001481475683616, guid: 5b6661109ec0ac04a9dab5dc96b31d4e,
@@ -3232,6 +3328,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 721647304555169344, guid: dbaba5858b672a248a977ba5b5722cce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tree
+      objectReference: {fileID: 0}
     - target: {fileID: 1698913372624044906, guid: dbaba5858b672a248a977ba5b5722cce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3290,6 +3391,16 @@ PrefabInstance:
     - target: {fileID: 2211006201537951515, guid: dbaba5858b672a248a977ba5b5722cce,
         type: 3}
       propertyPath: m_Name
+      value: Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077790367896261803, guid: dbaba5858b672a248a977ba5b5722cce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209168988958469228, guid: dbaba5858b672a248a977ba5b5722cce,
+        type: 3}
+      propertyPath: m_TagString
       value: Tree
       objectReference: {fileID: 0}
     m_RemovedComponents: []
