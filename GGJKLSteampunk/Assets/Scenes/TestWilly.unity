@@ -551,43 +551,12 @@ PrefabInstance:
     - target: {fileID: 2965168903867460971, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 8.192
+      value: 20.48
       objectReference: {fileID: 0}
     - target: {fileID: 2965168903867460971, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 8.192
-      objectReference: {fileID: 0}
-    - target: {fileID: 2965168903867460981, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2965168903867460981, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2965168903867460981, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 831343a651992624d9783acd0f4a38d1,
-        type: 3}
-    - target: {fileID: 2965168903867460981, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2965168903867460981, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2965168903867460981, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
+      value: 20.48
       objectReference: {fileID: 0}
     - target: {fileID: 2965168903867460982, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
         type: 3}
