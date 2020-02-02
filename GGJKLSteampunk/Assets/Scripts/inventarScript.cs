@@ -398,11 +398,13 @@ public class inventarScript : MonoBehaviour
         if (collision.gameObject.tag == "GearPlant" && Input.GetKeyDown(KeyCode.E))
         {
             GameObject.Instantiate(Gear, collision.transform.position + new Vector3(Random.Range(1.0f,4.0f),0,0), collision.transform.rotation );
+            GameObject.Instantiate(Gear, collision.transform.position + new Vector3(Random.Range(1.0f,4.0f),0,0), collision.transform.rotation );
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "FeatherPlant" && Input.GetKeyDown(KeyCode.E))
         {
+            GameObject.Instantiate(Feather, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             GameObject.Instantiate(Feather, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             Destroy(collision.gameObject);
         }
@@ -410,11 +412,13 @@ public class inventarScript : MonoBehaviour
         if (collision.gameObject.tag == "ScrapPlant" && Input.GetKeyDown(KeyCode.E))
         {
             GameObject.Instantiate(Scrap, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
+            GameObject.Instantiate(Scrap, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "ScrewPlant" && Input.GetKeyDown(KeyCode.E))
         {
+            GameObject.Instantiate(Screw, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             GameObject.Instantiate(Screw, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             Destroy(collision.gameObject);
         }
