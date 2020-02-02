@@ -12,11 +12,12 @@ public class EnemyZero : MonoBehaviour
     Animator animator;
     public float timeUntilArrived = 0.7f;
     public int direction = 0;
-
+    AudioSource[] audio;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = gameObject.GetComponents<AudioSource>();
         position = gameObject.transform.position;
         animator = GetComponent<Animator>();
         rotation = gameObject.transform.rotation;
@@ -54,6 +55,8 @@ public class EnemyZero : MonoBehaviour
 
         if (!isAttacking)
         {
+            audio[UnityEngine.Random.Range(0, 2)].Play();
+
             isAttacking = true;
             StartCoroutine(attack());
         }
