@@ -115,9 +115,6 @@ public class inventarScript : MonoBehaviour
             scrap -= (scrapScrewMin * ScrapScrewFactor);
             screw -= (scrapScrewMin * ScrapScrewFactor);
             pumpText.text = pump.ToString();
-            scrapText.text = scrap.ToString();
-            screwText.text = screw.ToString();
-
             Debug.Log("Pumpen: " +pump);
 
         }
@@ -128,8 +125,6 @@ public class inventarScript : MonoBehaviour
             feather -= (featherGearMin * FeatherGearFactor);
             gear -= (featherGearMin * FeatherGearFactor);
             clockworkText.text = clockwork.ToString();
-            featherText.text = feather.ToString();
-            gearText.text = gear.ToString();
             Debug.Log("Gears: " + gear);
         }
 
@@ -140,8 +135,6 @@ public class inventarScript : MonoBehaviour
             pump -= (pumpClockMin * pumpClockFactor);
             clockwork -= (pumpClockMin * pumpClockFactor);
             nucReactorText.text = nucReactor.ToString();
-            pumpText.text = pump.ToString();
-            clockworkText.text = clockwork.ToString();
             Debug.Log("Reaktor " + nucReactor);
         }
     }
@@ -360,6 +353,7 @@ public class inventarScript : MonoBehaviour
 
         float random = Random.Range(0.0f, 1.0f);
         bool stolen = false;
+        Debug.Log("Random Number: " + random);
         if(random <= 0.3f)
         {
 
@@ -369,22 +363,26 @@ public class inventarScript : MonoBehaviour
                 if (random2 == 0)
                 {
                     clockwork--;
+                    clockworkText.text = clockwork.ToString();
                     stolen = true;
                 }
                 else
                 {
                     pump--;
+                    pumpText.text = pump.ToString();
                     stolen = true;
                 }
             }
             else if (clockwork > 0)
             {
                 clockwork--;
+                clockworkText.text = clockwork.ToString();
                 stolen = true;
             }
             else if (pump>0)
             {
                 pump--;
+                pumpText.text = pump.ToString();
                 stolen = true;
             }
 
@@ -393,10 +391,12 @@ public class inventarScript : MonoBehaviour
         if (!stolen)
         {
             int max = scrap + feather + screw + gear;
+            Debug.Log("Max: " + max);
             if (max > 0)
             {
 
-                int random2 = Random.Range(2, 5);
+                int random2 = Random.Range(1, 4);
+                Debug.Log("Random2: " + random2);
                 int i = 0;
                 if (max > random2)
                 {
@@ -409,6 +409,7 @@ public class inventarScript : MonoBehaviour
                                 if (scrap > 0)
                                 {
                                     scrap--;
+                                    scrapText.text = scrap.ToString();
                                     i++;
                                 }
                                 break;
@@ -416,6 +417,7 @@ public class inventarScript : MonoBehaviour
                                 if (feather > 0)
                                 {
                                     feather--;
+                                    featherText.text = feather.ToString();
                                     i++;
                                 }
                                 break;
@@ -423,6 +425,7 @@ public class inventarScript : MonoBehaviour
                                 if (screw > 0)
                                 {
                                     screw--;
+                                    screwText.text = screw.ToString();
                                     i++;
                                 }
                                 break;
@@ -430,6 +433,7 @@ public class inventarScript : MonoBehaviour
                                 if (gear > 0)
                                 {
                                     gear--;
+                                    gearText.text = gear.ToString();
                                     i++;
                                 }
                                 break;
@@ -446,6 +450,10 @@ public class inventarScript : MonoBehaviour
                     feather = 0;
                     screw = 0;
                     gear = 0;
+                    scrapText.text = scrap.ToString();
+                    featherText.text = feather.ToString();
+                    screwText.text = screw.ToString();
+                    gearText.text = gear.ToString();
                 }
 
             }

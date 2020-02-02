@@ -13,7 +13,7 @@ public class EnemyZero : MonoBehaviour
     public float timeUntilArrived = 0.7f;
     public int direction = 0;
 
-    public GameObject mainCharacter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,16 +51,11 @@ public class EnemyZero : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
+
         if (!isAttacking)
         {
             isAttacking = true;
             StartCoroutine(attack());
-        }
-
-        if (collider2D.gameObject.CompareTag("Player")) 
-        {
-
-            mainCharacter.GetComponent<inventarScript>().itemSteal();
         }
 
     }
@@ -167,6 +162,7 @@ public class EnemyZero : MonoBehaviour
                 Debug.Log("Unmöglicher Fall im switch-DirectionAngle Block des EnemyZero Scriptes");
                 break;
         }
+
 
     }
 }
