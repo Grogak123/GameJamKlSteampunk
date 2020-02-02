@@ -25,7 +25,7 @@ public class inventarScript : MonoBehaviour
     public TextMeshProUGUI pumpText;
     public TextMeshProUGUI nucReactorText;
 
-
+    //Wie Viel Stuff ma pro Baum brauch
 
     public int Level0Screw;
     public int Level0Gear;
@@ -48,6 +48,11 @@ public class inventarScript : MonoBehaviour
     private bool _Tree1Condition02 = false;
 
     private bool _Tree2Condition01 = false;
+
+    public GameObject Gear;
+    public GameObject Screw;
+    public GameObject Feather;
+    public GameObject Scrap;
 
 
     void Start()
@@ -389,6 +394,28 @@ public class inventarScript : MonoBehaviour
             Debug.Log("Collision");
             TreeUpgrade();
         }
+
+        if (collision.gameObject.tag == "GearPlant" && Input.GetKeyDown(KeyCode.E))
+        {
+            GameObject.Instantiate(Gear, transform.position, transform.rotation);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "FeatherPlant" && Input.GetKeyDown(KeyCode.E))
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "ScrapPlant" && Input.GetKeyDown(KeyCode.E))
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "ScrewPlant" && Input.GetKeyDown(KeyCode.E))
+        {
+            Destroy(collision.gameObject);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
