@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Clock : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class Clock : MonoBehaviour
 
         if(referenceTime > seconds)
         {
-            Debug.Log("LOSER");
+            SceneManager.LoadScene("lose");
         }
 
     }

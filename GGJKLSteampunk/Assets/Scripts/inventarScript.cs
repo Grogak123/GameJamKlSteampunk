@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class inventarScript : MonoBehaviour
 {
@@ -131,6 +132,8 @@ public class inventarScript : MonoBehaviour
             scrap -= (scrapScrewMin * ScrapScrewFactor);
             screw -= (scrapScrewMin * ScrapScrewFactor);
             pumpText.text = pump.ToString();
+            screwText.text = screw.ToString();
+            scrapText.text = scrap.ToString();
 
 
         }
@@ -141,6 +144,8 @@ public class inventarScript : MonoBehaviour
             feather -= (featherGearMin * FeatherGearFactor);
             gear -= (featherGearMin * FeatherGearFactor);
             clockworkText.text = clockwork.ToString();
+            featherText.text = feather.ToString();
+            gearText.text = gear.ToString();
 
         }
 
@@ -151,6 +156,8 @@ public class inventarScript : MonoBehaviour
             pump -= (pumpClockMin * pumpClockFactor);
             clockwork -= (pumpClockMin * pumpClockFactor);
             nucReactorText.text = nucReactor.ToString();
+            pumpText.text = pump.ToString();
+            clockworkText.text = clockwork.ToString();
 
         }
     }
@@ -367,7 +374,7 @@ public class inventarScript : MonoBehaviour
 
         if (_Tree2Condition01 == true)
         {
-            Debug.Log("WINNER");
+            SceneManager.LoadScene("Win");
         }
 
 
