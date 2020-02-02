@@ -6,6 +6,7 @@ public class stealingScript : MonoBehaviour
 {
     public GameObject mainCharacter;
     public GameObject mainCharacterWithAnimator;
+    private bool gotHit = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +15,10 @@ public class stealingScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collider2D)
     {
-        if (collider2D.gameObject.CompareTag("Player"))
+
+        if (collider2D.gameObject.CompareTag("Player") && !gotHit)
         {
-            Debug.Log("Try Stealing!!!!!!!!!!!");
-          
-                Debug.Log("Stoooooooooooooooooooolen");
+            gotHit = true;
                 mainCharacter.GetComponent<inventarScript>().itemSteal();
             mainCharacterWithAnimator.GetComponent<Animator>().SetBool("isHit", true);
             StartCoroutine(wait());
@@ -30,8 +30,9 @@ public class stealingScript : MonoBehaviour
     {
 
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         mainCharacterWithAnimator.GetComponent<Animator>().SetBool("isHit", false);
+        gotHit = false;
 
     }
 }
