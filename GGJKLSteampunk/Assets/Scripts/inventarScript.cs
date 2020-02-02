@@ -102,6 +102,9 @@ public class inventarScript : MonoBehaviour
             scrap -= (scrapScrewMin * ScrapScrewFactor);
             screw -= (scrapScrewMin * ScrapScrewFactor);
             pumpText.text = pump.ToString();
+            scrapText.text = scrap.ToString();
+            screwText.text = screw.ToString();
+
             Debug.Log("Pumpen: " +pump);
 
         }
@@ -112,6 +115,8 @@ public class inventarScript : MonoBehaviour
             feather -= (featherGearMin * FeatherGearFactor);
             gear -= (featherGearMin * FeatherGearFactor);
             clockworkText.text = clockwork.ToString();
+            featherText.text = feather.ToString();
+            gearText.text = gear.ToString();
             Debug.Log("Gears: " + gear);
         }
 
@@ -122,6 +127,8 @@ public class inventarScript : MonoBehaviour
             pump -= (pumpClockMin * pumpClockFactor);
             clockwork -= (pumpClockMin * pumpClockFactor);
             nucReactorText.text = nucReactor.ToString();
+            pumpText.text = pump.ToString();
+            clockworkText.text = clockwork.ToString();
             Debug.Log("Reaktor " + nucReactor);
         }
     }
