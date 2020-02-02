@@ -54,7 +54,8 @@ public class inventarScript : MonoBehaviour
     public GameObject Screw;
     public GameObject Feather;
     public GameObject Scrap;
-
+    AudioSource audio;
+    
 
     void Start()
     {
@@ -66,8 +67,8 @@ public class inventarScript : MonoBehaviour
         clockwork = 0;
         nucReactor = 0;
         invUsed = 0;
+        audio= gameObject.GetComponent<AudioSource>();
 
-        
     }
 
     /*
@@ -404,6 +405,7 @@ public class inventarScript : MonoBehaviour
 
         if (collision.gameObject.tag == "GearPlant" && Input.GetKeyDown(KeyCode.E))
         {
+            audio.Play();
             GameObject.Instantiate(Gear, collision.transform.position + new Vector3(Random.Range(1.0f,4.0f),0,0), collision.transform.rotation );
             GameObject.Instantiate(Gear, collision.transform.position + new Vector3(Random.Range(1.0f,4.0f),0,0), collision.transform.rotation );
             Destroy(collision.gameObject);
@@ -411,6 +413,7 @@ public class inventarScript : MonoBehaviour
 
         if (collision.gameObject.tag == "FeatherPlant" && Input.GetKeyDown(KeyCode.E))
         {
+            audio.Play();
             GameObject.Instantiate(Feather, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             GameObject.Instantiate(Feather, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             Destroy(collision.gameObject);
@@ -418,6 +421,7 @@ public class inventarScript : MonoBehaviour
 
         if (collision.gameObject.tag == "ScrapPlant" && Input.GetKeyDown(KeyCode.E))
         {
+            audio.Play();
             GameObject.Instantiate(Scrap, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             GameObject.Instantiate(Scrap, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             Destroy(collision.gameObject);
@@ -425,6 +429,7 @@ public class inventarScript : MonoBehaviour
 
         if (collision.gameObject.tag == "ScrewPlant" && Input.GetKeyDown(KeyCode.E))
         {
+            audio.Play();
             GameObject.Instantiate(Screw, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             GameObject.Instantiate(Screw, collision.transform.position + new Vector3(Random.Range(1.0f, 4.0f), 0, 0), collision.transform.rotation);
             Destroy(collision.gameObject);
