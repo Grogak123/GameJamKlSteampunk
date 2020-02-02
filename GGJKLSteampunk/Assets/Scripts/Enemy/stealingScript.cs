@@ -5,6 +5,7 @@ using UnityEngine;
 public class stealingScript : MonoBehaviour
 {
     public GameObject mainCharacter;
+    public GameObject mainCharacterWithAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,17 @@ public class stealingScript : MonoBehaviour
           
                 Debug.Log("Stoooooooooooooooooooolen");
                 mainCharacter.GetComponent<inventarScript>().itemSteal();
-      
+            mainCharacterWithAnimator.GetComponent<Animator>().SetBool("isHit", true);
+            StartCoroutine(wait());
 
         }
+
+    }
+    IEnumerator wait()
+    {
+
+        yield return new WaitForSeconds(1);
+        mainCharacterWithAnimator.GetComponent<Animator>().SetBool("isHit", false);
 
     }
 }
