@@ -41,6 +41,7 @@ namespace gamejam
             thisAnimator.SetFloat("Horizontal", horizontal);
             thisAnimator.SetFloat("Vertical", vertical);
             thisAnimator.SetFloat("Speed", speed);
+
             
         }
 
