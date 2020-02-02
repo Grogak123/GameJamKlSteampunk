@@ -131,7 +131,7 @@ public class inventarScript : MonoBehaviour
             scrap -= (scrapScrewMin * ScrapScrewFactor);
             screw -= (scrapScrewMin * ScrapScrewFactor);
             pumpText.text = pump.ToString();
-            Debug.Log("Pumpen: " +pump);
+
 
         }
         if(FEATHER>=FeatherGearFactor && GEAR >= FeatherGearFactor)
@@ -141,7 +141,7 @@ public class inventarScript : MonoBehaviour
             feather -= (featherGearMin * FeatherGearFactor);
             gear -= (featherGearMin * FeatherGearFactor);
             clockworkText.text = clockwork.ToString();
-            Debug.Log("Gears: " + gear);
+
         }
 
         if(PUMP>=pumpClockFactor && CLOCKWORK >= pumpClockFactor)
@@ -151,7 +151,7 @@ public class inventarScript : MonoBehaviour
             pump -= (pumpClockMin * pumpClockFactor);
             clockwork -= (pumpClockMin * pumpClockFactor);
             nucReactorText.text = nucReactor.ToString();
-            Debug.Log("Reaktor " + nucReactor);
+
         }
     }
     /*
@@ -385,13 +385,13 @@ public class inventarScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "CraftTable" && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Collision");
+
             itemUpgrade();
         }
 
         if (collision.gameObject.tag == "Tree" && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Collision");
+
             TreeUpgrade();
         }
 
@@ -430,28 +430,25 @@ public class inventarScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Feather"))
         {
             itemCollected("Feather");
-            Debug.Log("Feather: " + FEATHER);
+
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Gear"))
         {
             itemCollected("Gear");
-            Debug.Log("Gear: " + GEAR);
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Screw"))
         {
             itemCollected("Screw");
-            Debug.Log("Screw: " + SCREW);
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Scrap"))
         {
             itemCollected("Scrap");
-            Debug.Log("Srap: " + SCRAP);
             Destroy(collision.gameObject);
         }
 
@@ -523,7 +520,6 @@ public class inventarScript : MonoBehaviour
 
         float random = Random.Range(0.0f, 1.0f);
         bool stolen = false;
-        Debug.Log("Random Number: " + random);
         if(random <= 0.3f)
         {
 
@@ -561,12 +557,12 @@ public class inventarScript : MonoBehaviour
         if (!stolen)
         {
             int max = scrap + feather + screw + gear;
-            Debug.Log("Max: " + max);
+
             if (max > 0)
             {
 
                 int random2 = Random.Range(1, 4);
-                Debug.Log("Random2: " + random2);
+
                 int i = 0;
                 if (max > random2)
                 {
