@@ -52,8 +52,8 @@ public class EnemyZero : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
-
-        if (!isAttacking)
+        
+        if (!isAttacking && collider2D.gameObject.CompareTag("Player"))
         {
             audio[UnityEngine.Random.Range(0, 2)].Play();
 
@@ -93,7 +93,7 @@ public class EnemyZero : MonoBehaviour
         /*
          * Callt den Animator und lässt so die entsprechende Animation laufen
          */
-        Debug.Log(directionInDegree);
+
         switch (directionInDegree)
         {
             case 0:
