@@ -14,6 +14,7 @@ namespace gamejam
         float horizontal;
         float vertical;
         float moveLimiter = 0.7f;
+        float speed;
 
         public float runSpeed = 20.0f;
 
@@ -28,10 +29,18 @@ namespace gamejam
             // Gives a value between -1 and 1
             horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
             vertical = Input.GetAxisRaw("Vertical"); // -1 is down
-
+            if (horizontal == 0 && vertical == 0)
+            {
+                speed = 0;
+            }
+            else
+            {
+                speed = 1;
+            }
 
             thisAnimator.SetFloat("Horizontal", horizontal);
             thisAnimator.SetFloat("Vertical", vertical);
+            thisAnimator.SetFloat("Speed", speed);
             
         }
 
