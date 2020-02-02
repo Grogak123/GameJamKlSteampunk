@@ -26,6 +26,19 @@ public class inventarScript : MonoBehaviour
     public TextMeshProUGUI nucReactorText;
 
 
+    public int Level0Screw;
+    public int Level0Gear;
+    public int Level0feather;
+    public int Level0scrap;
+    public int Level1clockwork;
+    public int Level1pump;
+    public int Level2nucReactor;
+
+    public GameObject Tree0;
+    public GameObject Tree1;
+    public GameObject Tree2;
+
+
     void Start()
     {
         scrap = 0;
@@ -222,6 +235,12 @@ public class inventarScript : MonoBehaviour
         }
     }
 
+
+    void TreeUpgrade()
+    {
+        Level0feather
+    }
+
     /*
      * Trigger für Knopfdruck erkenne und Items upgraden
      *
@@ -234,6 +253,12 @@ public class inventarScript : MonoBehaviour
         {
             Debug.Log("Collision");
             itemUpgrade();
+        }
+
+        if (collision.gameObject.tag == "Tree" && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Collision");
+            TreeUpgrade();
         }
     }
 
