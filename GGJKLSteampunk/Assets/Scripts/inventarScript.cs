@@ -26,17 +26,28 @@ public class inventarScript : MonoBehaviour
     public TextMeshProUGUI nucReactorText;
 
 
+
     public int Level0Screw;
     public int Level0Gear;
-    public int Level0feather;
-    public int Level0scrap;
-    public int Level1clockwork;
-    public int Level1pump;
-    public int Level2nucReactor;
+    public int Level0Feather;
+    public int Level0Scrap;
+    public int Level1Clockwork;
+    public int Level1Pump;
+    public int Level2NucReactor;
 
     public GameObject Tree0;
     public GameObject Tree1;
     public GameObject Tree2;
+
+    private bool _Tree0Condition01 = false;
+    private bool _Tree0Condition02 = false;
+    private bool _Tree0Condition03 = false;
+    private bool _Tree0Condition04 = false;
+
+    private bool _Tree1Condition01 = false;
+    private bool _Tree1Condition02 = false;
+
+    private bool _Tree2Condition01 = false;
 
 
     void Start()
@@ -229,9 +240,134 @@ public class inventarScript : MonoBehaviour
     }
 
 
+
+    //public int Level0Screw;
+    //public int Level0Gear;
+    //public int Level0Feather;
+    //public int Level0Scrap;
+    //public int Level1Clockwork;
+    //public int Level1Pump;
+    //public int Level2NucReactor;
+
+    //public GameObject Tree0;
+    //public GameObject Tree1;
+    //public GameObject Tree2;
+
     void TreeUpgrade()
     {
-        Level0feather
+        if(Tree0.activeSelf == true && FEATHER > 0 && Level0Feather > 0)
+        {
+            Level0Feather -= 1;
+            FEATHER -= 1;
+            featherText.text = FEATHER.ToString();
+
+            if(Level0Feather <= 0)
+            {
+                _Tree0Condition01 = true;
+              
+            }
+            
+        }
+
+        if (Tree0.activeSelf == true && SCREW > 0 && Tree0.activeSelf == true && Level0Screw > 0)
+        {
+            Level0Screw -= 1;
+            SCREW -= 1;
+            screwText.text = SCREW.ToString();
+            if (Level0Screw<= 0)
+            {
+                _Tree0Condition02 = true;
+            }
+        }
+
+        if (Tree0.activeSelf == true && GEAR > 0 && Tree0.activeSelf == true && Level0Gear > 0)
+        {
+            Level0Gear -= 1;
+            GEAR -= 1;
+            gearText.text = GEAR.ToString();
+
+            if (Level0Gear <= 0)
+            {
+                _Tree0Condition03 = true;
+            }
+        }
+
+        if (Tree0.activeSelf == true && SCRAP > 0 && Tree0.activeSelf == true && Level0Scrap > 0)
+        {
+            Level0Scrap -= 1;
+            SCRAP -= 1;
+            scrapText.text = SCRAP.ToString();
+
+            if (Level0Scrap <= 0)
+            {
+                _Tree0Condition04 = true;
+            }
+        }
+
+        if (_Tree0Condition01 == true && _Tree0Condition02 == true && _Tree0Condition03 == true && _Tree0Condition04)
+        {
+            Tree0.SetActive(false);
+            Tree1.SetActive(true);
+        }
+
+        if (Tree1.activeSelf == true && PUMP > 0 && Level1Pump > 0)
+        {
+            Level1Pump -= 1;
+            PUMP -= 1;
+            pumpText.text = PUMP.ToString();
+
+            if (Level1Pump <= 0)
+            {
+                _Tree1Condition01 = true;
+
+            }
+
+        }
+
+        if (Tree1.activeSelf == true && CLOCKWORK > 0 && Level1Clockwork > 0)
+        {
+            Level1Clockwork -= 1;
+            CLOCKWORK-= 1;
+            clockworkText.text = CLOCKWORK.ToString();
+
+            if (Level1Clockwork <= 0)
+            {
+                _Tree1Condition02 = true;
+
+            }
+
+        }
+
+
+        if (_Tree1Condition01 == true && _Tree1Condition02 == true)
+        {
+            Tree1.SetActive(false);
+            Tree2.SetActive(true);
+        }
+
+        if (Tree2.activeSelf == true && NUCREACTOR > 0 && Level2NucReactor > 0)
+        {
+            Level2NucReactor -= 1;
+            NUCREACTOR -= 1;
+            nucReactorText.text = NUCREACTOR.ToString();
+
+            if (Level2NucReactor <= 0)
+            {
+                _Tree2Condition01 = true;
+
+            }
+
+        }
+
+
+        if (_Tree2Condition01 == true)
+        {
+            Debug.Log("WINNER");
+        }
+
+
+
+
     }
 
     /*

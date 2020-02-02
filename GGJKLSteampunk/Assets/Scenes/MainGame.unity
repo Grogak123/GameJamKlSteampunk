@@ -124,7 +124,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6024648692289283164}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &94603069
+--- !u!61 &94603071
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6024648692289283164}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &260926870
+--- !u!61 &260926872
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2397,7 +2397,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6024648692289283164}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &1794648851
+--- !u!61 &1794648853
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2920,6 +2920,46 @@ PrefabInstance:
       propertyPath: nucReactorText
       value: 
       objectReference: {fileID: 1033523581}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Tree0
+      value: 
+      objectReference: {fileID: 94603068}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Tree1
+      value: 
+      objectReference: {fileID: 1794648850}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Tree2
+      value: 
+      objectReference: {fileID: 260926869}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Level0Screw
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Level0Gear
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Level0Feather
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Level0Scrap
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Level1Clockwork
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Level1Pump
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001150847, guid: 3c4ad7904eafe2242aa101c3f0281fe7, type: 3}
+      propertyPath: Level2NucReactor
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2965168902203530884, guid: 3c4ad7904eafe2242aa101c3f0281fe7,
         type: 3}
       propertyPath: orthographic size
@@ -3402,6 +3442,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874325478284323363, guid: dbaba5858b672a248a977ba5b5722cce,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874325478284323363, guid: dbaba5858b672a248a977ba5b5722cce,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874325478284323363, guid: dbaba5858b672a248a977ba5b5722cce,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbaba5858b672a248a977ba5b5722cce, type: 3}
