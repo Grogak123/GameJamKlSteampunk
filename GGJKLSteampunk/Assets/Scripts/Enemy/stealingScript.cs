@@ -28,8 +28,6 @@ public class stealingScript : MonoBehaviour
     }
     IEnumerator wait()
     {
-
-
         yield return new WaitForSeconds(2);
         mainCharacterWithAnimator.GetComponent<Animator>().SetBool("isHit", false);
         gotHit = false;
